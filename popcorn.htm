@@ -1,0 +1,1008 @@
+<html><head><title>popcorn-engine logfile</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<style>body
+{
+	padding-top: 44px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #bbbbbb;
+	margin: 0px;
+	color: #000000;
+	font-family: Consolas, Courier;
+	font-size: 10pt;
+}
+.header2
+{
+	font-size: 72px;
+	left: 5px;
+	color: #8a98b0;
+	position: absolute;
+	top: -22px
+}
+.header
+{
+	left: 0px;
+	overflow: hidden;
+	width: 100%;
+	color: #ffffff;
+	font-family: Verdana, Arial;
+	position: absolute;
+	top: 0px;
+	height: 44px;
+	background-color: #7b8aa6
+}
+.pagetitle
+{
+	font-size: 22px;
+	z-index: 100;
+	left: 5px;
+	color: #ffffff;
+	position: absolute;
+	top: 14px;
+}
+.copyright
+{
+	font-size: 10px;
+	z-index: 60;
+	left: -8px;
+	width: 100%;
+	color: #acb6c8;
+	position: absolute;
+	top: 1px;
+	text-align: right;
+	text-decoration: none;
+}
+.build
+{
+	font-size: 12px;
+	color: #eeeeee;
+	text-decoration: none;
+}
+a.header1:link
+{
+	font-size: 30px;
+	z-index: 50;
+	left: -8px;
+	width: 100%;
+	color: #a0acc0;
+	position: absolute;
+	top: 6px;
+	text-align: right;
+	text-decoration: none;
+}
+a.header1:visited
+{
+	font-size: 30px;
+	z-index: 50;
+	left: -8px;
+	width: 100%;
+	color: #a0acc0;
+	position: absolute;
+	top: 6px;
+	text-align: right;
+	text-decoration: none;
+}
+a.header1:hover
+{
+	font-size: 30px;
+	z-index: 50;
+	left: -8px;
+	width: 100%;
+	color: #acb6c8;
+	position: absolute;
+	top: 6px;
+	text-align: right;
+	text-decoration: none;
+}
+.log_caller { color: #666666; }
+.dll { color: #800070; }
+.M   { color: #000000; background-color: #DDDDDD; white-space: pre; }
+.W   { color: #000000; background-color: #FFAA33; white-space: pre; }
+.E   { color: #FFFFFF; background-color: #DD1100; white-space: pre; }
+.EC  { color: #FFFFFF; background-color: #DD0000; white-space: pre; }
+.EI  { color: #FFFFFF; background-color: #EE0000; white-space: pre; }
+.EF  { color: #FFFFFF; background-color: #FF0000; white-space: pre; }
+</style>
+</head>
+<body>
+<div class=header id=header>
+	<a class=header1 id=header1 href="http://www.popcornfx.com/">www.popcornfx.com</a>
+	<div class=copyright id=copyright>Copyright (c) Persistant Studios 2010-2017</div>
+	<div class=header2 id=header2>PopcornFX</div>
+	<div class=pagetitle id=pagetitle>PopcornFX logfile. <font class=build>build 1.11.3.33951, Tue Apr 4 11:17:51 2017 +0200</font></i></div>
+</div><div class=M><center>... STARTUP ...</center></div>
+<div class=M>[BOOT]> License: "DiscoveryPlugin"</div>
+<div class=M>[BOOT]> PopcornFX SDK build config: ...... RELEASE</div>
+<div class=M>[BOOT]> Has debug asserts: .................... NO</div>
+<div class=M>[BOOT]> Has release asserts: ................. YES</div>
+<div class=M>[BOOT]> Has anonymous asserts: ................ NO</div>
+<div class=M>[BOOT]> Has containers monitoring: ............ NO</div>
+<div class=M>[BOOT]> Has iterators debug checks: ........... NO</div>
+<div class=M>[BOOT]> Mem debug level: ....................... 0</div>
+<div class=M>[BOOT]> Has default mem allocators: .......... YES</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING Kernel ...</div>
+<div class=M>[BOOT]> [Kernel_Callstack         ]:Startup       261 usec         0 bytes      0 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_PerfMonitor       ]:Startup         3 usec       134 bytes      1 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Mem               ]:Startup         0 usec        99 bytes      1 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Containers        ]:Startup         0 usec         0 bytes      1 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Asserts           ]:Startup         0 usec         0 bytes      1 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Buffer            ]:Startup        10 usec      8219 bytes      9 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_String            ]:Startup         1 usec      2102 bytes     11 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_RTTI              ]:Startup         0 usec         0 bytes     11 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Threads           ]:Startup        88 usec         0 bytes     12 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_ThreadPool        ]:Startup         0 usec         0 bytes     12 KbTotal</div>
+<div class=M>[Kernel_CapsCpu]> Multi-Core system, Multi-threaded cores</div>
+<div class=M>[Kernel_CapsCpu]>      Logical processors reported by OS : 8</div>
+<div class=M>[Kernel_CapsCpu]>      Visible logical processors        : 8</div>
+<div class=M>[Kernel_CapsCpu]>      Cores                             : 4</div>
+<div class=M>[Kernel_CapsCpu]>      Physical packages                 : 1</div>
+<div class=M>[Kernel_CapsCpu]> ---- Package 0 -------------------------</div>
+<div class=M>[Kernel_CapsCpu]>      Vendor                            : GenuineIntel</div>
+<div class=M>[Kernel_CapsCpu]>      CPU Name                          : "Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz"</div>
+<div class=M>[Kernel_CapsCpu]>      Frequency                         : 4010.0 MHz (4007.594 measured)</div>
+<div class=M>[Kernel_CapsCpu]>      Microarchitecture                 : 5E, 64-bits</div>
+<div class=M>[Kernel_CapsCpu]>      Extensions                        : VirMode DBG     PageSz4 RDTSC   MSR     PAE     MCE     CXCHG8  APIC    SEP     MTRR    PGE     </div>
+<div class=M>[Kernel_CapsCpu]>                                          MCA     CMOV    PAT     PSE36   CLFlush DebugSt ACPI    FXSR    SSnoop  HThread ThMon   ThMon2  </div>
+<div class=M>[Kernel_CapsCpu]>                                          IA64Ext PBE     ExecDis DTES64  MONITOR DS_CPL  VMEXT   ESpdStp CXCHG16 XTPR    PDCM    x2APIC  </div>
+<div class=M>[Kernel_CapsCpu]>                                          XSave   OsXSave TSCInv  MOVBE   POPCNT  CLMUL   BMI1    BMI2    F16C    AES     FMA3    RDRAND  </div>
+<div class=M>[Kernel_CapsCpu]>                                          MMX     SSE     SSE2    SSE3    SSSE3   SSE4_1  SSE4_2  AVX     AVX2    </div>
+<div class=M>[Kernel_CapsCpu]>      CPUID Leaves                      : 00000016-00000008</div>
+<div class=M>[Kernel_CapsCpu]>      CACHE TYPE                  SIZE         ASSOCIATIVITY  LINE-SIZE</div>
+<div class=M>[Kernel_CapsCpu]>         L1 Data cache              32 KB             8 ways   64-bytes</div>
+<div class=M>[Kernel_CapsCpu]>         L1 Instruction cache       32 KB             8 ways   64-bytes</div>
+<div class=M>[Kernel_CapsCpu]>         L2 Unified cache          256 KB             4 ways   64-bytes</div>
+<div class=M>[Kernel_CapsCpu]>         L3 Unified cache         8192 KB            16 ways   64-bytes</div>
+<div class=M>[Kernel_CapsCpu]>      PROCESSOR  APIC_ID  PACKAGE     CORE   THREAD    CACHES</div>
+<div class=M>[Kernel_CapsCpu]>              0     0000        0        0        0    L1D[0] L1I[0] L2[0] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              1     0001        0        0        1    L1D[0] L1I[0] L2[0] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              2     0002        0        1        0    L1D[1] L1I[1] L2[1] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              3     0003        0        1        1    L1D[1] L1I[1] L2[1] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              4     0004        0        2        0    L1D[2] L1I[2] L2[2] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              5     0005        0        2        1    L1D[2] L1I[2] L2[2] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              6     0006        0        3        0    L1D[3] L1I[3] L2[3] L3[0]</div>
+<div class=M>[Kernel_CapsCpu]>              7     0007        0        3        1    L1D[3] L1I[3] L2[3] L3[0]</div>
+<div class=M>[BOOT]> [Kernel_CapsCpu           ]:Startup      6559 usec      1321 bytes     13 KbTotal</div>
+<div class=M>[Kernel_CapsMem]> Detecting memory:</div>
+<div class=M>[Kernel_CapsMem]>      MEMORY        :          USED     AVAILABLE         TOTAL</div>
+<div class=M>[Kernel_CapsMem]>      physical      :    10721.0 Mb     5614.0 Mb    16336.0 Mb</div>
+<div class=M>[Kernel_CapsMem]>      page file     :    13261.0 Mb     9218.0 Mb    22480.0 Mb</div>
+<div class=M>[Kernel_CapsMem]>      virtual       :     1784.0 Mb 134215944.0 Mb 134217728.0 Mb</div>
+<div class=M>[Kernel_CapsMem]>      Address range : 00007FFFFFFEFFFF - 0000000000010000</div>
+<div class=M>[BOOT]> [Kernel_CapsMem           ]:Startup      1609 usec        99 bytes     13 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Profiler          ]:Startup        16 usec      2629 bytes     16 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Checksum          ]:Startup         0 usec         0 bytes     16 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Compression       ]:Startup         0 usec         0 bytes     16 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_File              ]:Startup        14 usec        35 bytes     16 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Plugins           ]:Startup         0 usec        83 bytes     16 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Scheduler         ]:Startup       270 usec     38686 bytes     54 KbTotal</div>
+<div class=M>[BOOT]> [Kernel_Resources         ]:Startup         0 usec       107 bytes     54 KbTotal</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING BaseObject ...</div>
+<div class=M>[BOOT]> [BaseObject               ]:Startup        27 usec     30159 bytes     84 KbTotal</div>
+<div class=M>[BOOT]> [BaseObject_HBOScope      ]:Startup        24 usec     99827 bytes    182 KbTotal</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING EngineUtils ...</div>
+<div class=M>[BOOT]> [EngineUtils_Random       ]:Startup         4 usec      5137 bytes    187 KbTotal</div>
+<div class=M>[BOOT]> [EngineUtils_Timeline     ]:Startup         2 usec         0 bytes    187 KbTotal</div>
+<div class=M>[BOOT]> [EngineUtils_Actions      ]:Startup       111 usec     21316 bytes    208 KbTotal</div>
+<div class=M>[BOOT]> [EngineUtils_Core         ]:Startup        62 usec     13478 bytes    221 KbTotal</div>
+<div class=M>[BOOT]> [EngineUtils_Samplers     ]:Startup        36 usec      7274 bytes    228 KbTotal</div>
+<div class=M>[BOOT]> [EngineUtils_Skeleton     ]:Startup         5 usec      3471 bytes    232 KbTotal</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING Compiler ...</div>
+<div class=M>[BOOT]> [Compiler                 ]:Startup       154 usec    158089 bytes    386 KbTotal</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING Geometrics ...</div>
+<div class=M>[BOOT]> [Geometrics_Skeleton      ]:Startup         0 usec         0 bytes    386 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_Mesh          ]:Startup        46 usec      8152 bytes    394 KbTotal</div>
+<div class=M>[Geometrics_MeshDeformers]> CPU Dispatch mapped implementation of Skeletal Skinner to 'SIMD'</div>
+<div class=M>[BOOT]> [Geometrics_MeshDeformers ]:Startup        30 usec     44221 bytes    438 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_MeshResource  ]:Startup        11 usec      4686 bytes    442 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_MeshKdTree    ]:Startup         0 usec         0 bytes    442 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_Shapes        ]:Startup        54 usec     10984 bytes    453 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_Colliders     ]:Startup         0 usec         0 bytes    453 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_Billboards    ]:Startup         0 usec         0 bytes    453 KbTotal</div>
+<div class=M>[BOOT]> [Geometrics_RectangleList ]:Startup         1 usec      4329 bytes    458 KbTotal</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING Imaging ...</div>
+<div class=M>[BOOT]> [Imaging_Images           ]:Startup        17 usec      4491 bytes    462 KbTotal</div>
+<div class=M>[BOOT]> |</div>
+<div class=M>[BOOT]> | ... BOOTING Particles ...</div>
+<div class=M>[Particles]> Script bindings setup : 2.83 ms</div>
+<div class=M>[BOOT]> [Particles                ]:Startup      4471 usec   1387600 bytes   1817 KbTotal</div>
+<div class=M>[BOOT]> [CompilerBackend_CPU_Emulation]:Startup         4 usec     10327 bytes   1824 KbTotal</div>
+<div class=M>[Kernel_Plugins]> Registering module "CompilerBackend_CPU_Emulation" to handler "hh_compiler".</div>
+<div class=M>[Kernel_Plugins]> Registering module "PopcornFX-Image codec dds" to handler "im_codec".</div>
+<div class=M>[Kernel_Plugins]> Registering module "PopcornFX-Image codec png" to handler "im_codec".</div>
+<div class=M>[Kernel_Plugins]> Registering module "PopcornFX-Image codec targa" to handler "im_codec".</div>
+<div class=M>[Kernel_Plugins]> Registering module "PopcornFX-Image codec jpeg" to handler "im_codec".</div>
+<div class=M>[BOOT]> [UnityPlugin              ]:Startup         0 usec         0 bytes   1824 KbTotal</div>
+<div class=M>[UnityPlugin]> Startup PKFX</div>
+<div class=M>[UnityPlugin]> GraphicsEventD3D11</div>
+<div class=M>[UnityPlugin]> _PopcornFXStartup</div>
+<div class=M>[UnityPlugin]> GraphicsEventD3D11</div>
+<div class=M>[UnityPlugin]> Added Assets/StreamingAssets/PackFx for watching.</div>
+<div class=M>[UnityPlugin]> Exploring pack Assets/StreamingAssets/PackFx...</div>
+<div class=M>[UnityPlugin]>   -> Particles/ButterFly_sceneIntersect.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/CampFire_Events.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/CarHud_TextSampler.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/CoallBurn_SpatialLayers.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/ElectricalBall_pCoords.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Explosion_vrandFunction.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/FireFly_Attractor.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Fish_Flocking.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/FlameThrower_Ribbon.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Grenade_MeshRenderer.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Lightning_FpsConstraint.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Link_lerpFunction.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/MagicSpell_Dynamic.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/MagicSpell_Static.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Orb_rotateFunction.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Pentacle_AnimTrack.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Rain_ViewPosition.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Snow_TurbSampler.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Soul_parentFunction.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Spark_ExternEvents.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/Spark_Triggered.pkfx</div>
+<div class=M>[UnityPlugin]>   -> Particles/WorldMap_TextureSampler.pkfx</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CoallBurn_SpatialLayers.pkfx/CParticleEvolver_Script_AADC3440' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CoallBurn_SpatialLayers.pkfx/CParticleEvolver_Script_AADC3440' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CoallBurn_SpatialLayers.pkfx/CParticleDescriptor_67756E3B' (spawn)</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/SceneButterflies.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=24.8 Kb (50.0 %), nodes=141.9 Kb, total=166.8 Kb (expanded=191.6 Kb)</div>
+<div class=W>[UnityPlugin]> [MeshBuilder::LoadPkmm] "Meshes/SceneButterflies.pkmm" OK (primitives count: 336)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/CoallBurn_SpatialLayers.pkfx"</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FlameThrower_Ribbon.pkfx/CParticleEvolver_Script_4C7E77C4' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FlameThrower_Ribbon.pkfx/CParticleEvolver_Script_4C7E77C4' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FlameThrower_Ribbon.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FlameThrower_Ribbon.pkfx/CParticleEvolver_Script_0FC3FBF8' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FlameThrower_Ribbon.pkfx/CParticleEvolver_Script_0FC3FBF8' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FlameThrower_Ribbon.pkfx/CParticleDescriptor_77BB3C2C' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/FlameThrower_Ribbon.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Coal_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Coal_01.png) : 6.035 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\SymmetricGradient_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/SymmetricGradient_02.png) : 0.360 ms</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 00000000158FB4B8 buffers from maxverts=0, maxind=0 to maxvert=320, maxind=416 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Fire_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Fire_01.png) : 19.632 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_03.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_03.png) : 2.271 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003ED87458 buffers from maxverts=0, maxind=0 to maxvert=17528, maxind=26228 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_97610F91' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_97610F91' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_AAF52746' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_C91D3385' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_C91D3385' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_3CFCC4A8' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_C72DB929' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_9F86E372' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_9F86E372' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_D3845439' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_4A1A4938' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_4A1A4938' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_1BCDD73A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_8D0E40D4' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_8D0E40D4' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_0FF77D13' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleEvolver_Script_0FF77D13' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Grenade_MeshRenderer.pkfx/CParticleDescriptor_F4573156' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Grenade_MeshRenderer.pkfx"</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 954 indicies D3DFMT_INDEX16, 231 vertices, 318 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 3.491 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1476 indicies D3DFMT_INDEX16, 299 vertices, 492 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.718 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1260 indicies D3DFMT_INDEX16, 265 vertices, 420 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.844 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1512 indicies D3DFMT_INDEX16, 329 vertices, 504 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.759 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1098 indicies D3DFMT_INDEX16, 261 vertices, 366 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.654 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1398 indicies D3DFMT_INDEX16, 341 vertices, 466 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 3.666 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1074 indicies D3DFMT_INDEX16, 216 vertices, 358 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.846 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1632 indicies D3DFMT_INDEX16, 368 vertices, 544 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.867 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 954 indicies D3DFMT_INDEX16, 231 vertices, 318 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.751 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1476 indicies D3DFMT_INDEX16, 299 vertices, 492 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.687 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1260 indicies D3DFMT_INDEX16, 265 vertices, 420 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.830 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1512 indicies D3DFMT_INDEX16, 329 vertices, 504 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.946 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1098 indicies D3DFMT_INDEX16, 261 vertices, 366 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 3.274 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1398 indicies D3DFMT_INDEX16, 341 vertices, 466 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 3.120 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1074 indicies D3DFMT_INDEX16, 216 vertices, 358 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.637 ms</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Debris.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=11.5 Kb (50.0 %), nodes=28.7 Kb, total=40.2 Kb (expanded=51.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.7 Kb (50.0 %), nodes=47.8 Kb, total=66.5 Kb (expanded=85.3 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=15.9 Kb (50.0 %), nodes=40.2 Kb, total=56.1 Kb (expanded=72.0 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=18.8 Kb (50.0 %), nodes=45.3 Kb, total=64.1 Kb (expanded=82.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=13.4 Kb (50.0 %), nodes=34.6 Kb, total=48.1 Kb (expanded=61.5 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=17.9 Kb (50.0 %), nodes=44.0 Kb, total=62.0 Kb (expanded=79.9 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=12.9 Kb (50.0 %), nodes=32.9 Kb, total=45.8 Kb (expanded=58.7 Kb)</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=20.5 Kb (50.0 %), nodes=52.2 Kb, total=72.7 Kb (expanded=93.2 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 1632 indicies D3DFMT_INDEX16, 368 vertices, 544 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Rock.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Rock.png) : 2.728 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\DistortionRing_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/DistortionRing_01.png) : 0.475 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_03.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_03.png) : 1.737 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Debris_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Debris_01.png) : 1.117 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_03.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_03.png) : 1.713 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5CE278 buffers from maxverts=0, maxind=0 to maxvert=218, maxind=263 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5BD798 buffers from maxverts=0, maxind=0 to maxvert=1568, maxind=2288 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5145F8 buffers from maxverts=0, maxind=0 to maxvert=218, maxind=263 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F131D08 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5BD798 buffers from maxverts=1568, maxind=2288 to maxvert=3008, maxind=4448 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F253428 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F255EE8 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F253428 buffers from maxverts=140, maxind=146 to maxvert=278, maxind=353 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F253428 buffers from maxverts=278, maxind=353 to maxvert=482, maxind=659 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 00000000158FB4B8 buffers from maxverts=320, maxind=416 to maxvert=548, maxind=758 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F255EE8 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F255EE8 buffers from maxverts=266, maxind=335 to maxvert=470, maxind=641 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/Script_2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/Script_2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleDescriptor_313C46AB' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleDescriptor_89DF105C' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleDescriptor_246C6CEE' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleEvolver_Script_0259A8E8' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleEvolver_Script_0259A8E8' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/MagicSpell_Dynamic.pkfx/CParticleDescriptor_DA67C940' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/MagicSpell_Dynamic.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Flame_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Flame_01.png) : 0.779 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Trail_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Trail_01.png) : 0.272 ms</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=0, maxind=0 to maxvert=320, maxind=416 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_04.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_04.png) : 1.836 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=0, maxind=0 to maxvert=212, maxind=254 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=212, maxind=254 to maxvert=452, maxind=614 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=452, maxind=614 to maxvert=884, maxind=1262 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=320, maxind=416 to maxvert=608, maxind=848 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=140, maxind=146 to maxvert=278, maxind=353 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=884, maxind=1262 to maxvert=1472, maxind=2144 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=608, maxind=848 to maxvert=1058, maxind=1523 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=1472, maxind=2144 to maxvert=2384, maxind=3512 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=1058, maxind=1523 to maxvert=1898, maxind=2783 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=278, maxind=353 to maxvert=482, maxind=659 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=2384, maxind=3512 to maxvert=3764, maxind=5582 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=1898, maxind=2783 to maxvert=3224, maxind=4772 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=482, maxind=659 to maxvert=794, maxind=1127 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=3764, maxind=5582 to maxvert=5930, maxind=8831 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=3224, maxind=4772 to maxvert=4970, maxind=7391 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=794, maxind=1127 to maxvert=1274, maxind=1847 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=5930, maxind=8831 to maxvert=9158, maxind=13673 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=4970, maxind=7391 to maxvert=7880, maxind=11756 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=1274, maxind=1847 to maxvert=2012, maxind=2954 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=7880, maxind=11756 to maxvert=12098, maxind=18083 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=9158, maxind=13673 to maxvert=14030, maxind=20981 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=2012, maxind=2954 to maxvert=3104, maxind=4592 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=12098, maxind=18083 to maxvert=18260, maxind=27326 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=3104, maxind=4592 to maxvert=4730, maxind=7031 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=18260, maxind=27326 to maxvert=27668, maxind=41438 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=14030, maxind=20981 to maxvert=21230, maxind=31781 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=4730, maxind=7031 to maxvert=7160, maxind=10676 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=27668, maxind=41438 to maxvert=41804, maxind=62642 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=21230, maxind=31781 to maxvert=32066, maxind=48035 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F59BF68 buffers from maxverts=7160, maxind=10676 to maxvert=10880, maxind=16256 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F250288 buffers from maxverts=41804, maxind=62642 to maxvert=63296, maxind=94880 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=32066, maxind=48035 to maxvert=48176, maxind=72200 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/SceneButterflies.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=24.8 Kb (50.0 %), nodes=141.9 Kb, total=166.8 Kb (expanded=191.6 Kb)</div>
+<div class=W>[UnityPlugin]> [MeshBuilder::LoadPkmm] "Meshes/SceneButterflies.pkmm" OK (primitives count: 336)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_4' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_4' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleDescriptor_09D90E06' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleDescriptor_84D2BBF0' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleEvolver_Script_4F738424' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleEvolver_Script_4F738424' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleDescriptor_73D8B288' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_6' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_6' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleDescriptor_5919AB5C' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/Script_2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Explosion_vrandFunction.pkfx/CParticleDescriptor_B0FF9113' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Explosion_vrandFunction.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Fire_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Fire_02.png) : 43.534 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Debris_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Debris_01.png) : 1.118 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Distortion_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Distortion_01.png) : 0.625 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=0, maxind=0 to maxvert=296, maxind=380 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CDD78 buffers from maxverts=0, maxind=0 to maxvert=1328, maxind=1928 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CF0B8 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=296, maxind=380 to maxvert=518, maxind=713 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=518, maxind=713 to maxvert=854, maxind=1217 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CDD78 buffers from maxverts=1328, maxind=1928 to maxvert=2528, maxind=3728 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=854, maxind=1217 to maxvert=1382, maxind=2009 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=1382, maxind=2009 to maxvert=2168, maxind=3188 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=2168, maxind=3188 to maxvert=3320, maxind=4916 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CDD78 buffers from maxverts=2528, maxind=3728 to maxvert=4652, maxind=6914 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=3320, maxind=4916 to maxvert=5306, maxind=7895 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_BF50A457' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_BF50A457' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleDescriptor_D1997DAE' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_591E23EF' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_591E23EF' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleDescriptor_1D277313' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_C825C3CA' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_C825C3CA' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleDescriptor_9E3FA263' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_14D05181' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_14D05181' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_D1497F1B' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleEvolver_Script_D1497F1B' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/CampFire_Events.pkfx/CParticleDescriptor_D29A7545' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/CampFire_Events.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Fire_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Fire_01.png) : 19.746 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_03.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_03.png) : 1.788 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=0, maxind=0 to maxvert=182, maxind=209 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CC098 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D2A78 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=182, maxind=209 to maxvert=506, maxind=695 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=506, maxind=695 to maxvert=890, maxind=1271 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D2A78 buffers from maxverts=140, maxind=146 to maxvert=284, maxind=362 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CC098 buffers from maxverts=134, maxind=137 to maxvert=272, maxind=344 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=890, maxind=1271 to maxvert=1412, maxind=2054 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CC098 buffers from maxverts=272, maxind=344 to maxvert=476, maxind=650 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=1412, maxind=2054 to maxvert=2198, maxind=3233 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D2A78 buffers from maxverts=284, maxind=362 to maxvert=500, maxind=686 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D2A78 buffers from maxverts=500, maxind=686 to maxvert=818, maxind=1163 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F586FD8 buffers from maxverts=2198, maxind=3233 to maxvert=3554, maxind=5267 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CC098 buffers from maxverts=476, maxind=650 to maxvert=782, maxind=1109 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CF0B8 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5CE278 buffers from maxverts=0, maxind=0 to maxvert=218, maxind=263 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5BD798 buffers from maxverts=0, maxind=0 to maxvert=1568, maxind=2288 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5145F8 buffers from maxverts=0, maxind=0 to maxvert=218, maxind=263 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F131D08 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D2A78 buffers from maxverts=818, maxind=1163 to maxvert=1304, maxind=1892 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5BD798 buffers from maxverts=1568, maxind=2288 to maxvert=3008, maxind=4448 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F5CE278 buffers from maxverts=218, maxind=263 to maxvert=398, maxind=533 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_3' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_3' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_FB247043' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleEvolver_Script_0F7E6FED' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleEvolver_Script_0F7E6FED' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_4' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_4' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_7A4351D2' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_D8E1BE65' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_207FBFFE' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_29F3590A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_5' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/Script_5' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ElectricalBall_pCoords.pkfx/CParticleDescriptor_78C6FECC' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/ElectricalBall_pCoords.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Lightning_05.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Lightning_05.png) : 1.177 ms</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F24FEA8 buffers from maxverts=0, maxind=0 to maxvert=320, maxind=416 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/Geosphere.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=6.8 Kb (50.0 %), nodes=14.6 Kb, total=21.5 Kb (expanded=28.3 Kb)</div>
+<div class=M>[UnityPlugin]> RenderBuffer Mesh: setup mesh 960 indicies D3DFMT_INDEX16, 181 vertices, 320 primitives</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\EnergyBall_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/EnergyBall_02.png) : 3.309 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Glow_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Glow_02.png) : 1.616 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D20D8 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F24FEA8 buffers from maxverts=320, maxind=416 to maxvert=584, maxind=812 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F24FEA8 buffers from maxverts=584, maxind=812 to maxvert=986, maxind=1415 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F24FEA8 buffers from maxverts=986, maxind=1415 to maxvert=1640, maxind=2396 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleEvolver_Script_BC1951CA' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleEvolver_Script_BC1951CA' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleEvolver_Script_168DE691' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleEvolver_Script_168DE691' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleDescriptor_104D4D29' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleEvolver_Script_4E3ECB6C' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleEvolver_Script_4E3ECB6C' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleDescriptor_1DEAC189' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Lightning_FpsConstraint.pkfx/CParticleDescriptor_7C46C5E9' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Lightning_FpsConstraint.pkfx"</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Orb_rotateFunction.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Orb_rotateFunction.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Orb_rotateFunction.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Orb_rotateFunction.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Glow_03.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Glow_03.png) : 0.344 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=0, maxind=0 to maxvert=212, maxind=254 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=212, maxind=254 to maxvert=452, maxind=614 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=452, maxind=614 to maxvert=776, maxind=1100 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=776, maxind=1100 to maxvert=1244, maxind=1802 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=1244, maxind=1802 to maxvert=1976, maxind=2900 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=1976, maxind=2900 to maxvert=3092, maxind=4574 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=3092, maxind=4574 to maxvert=4760, maxind=7076 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=4760, maxind=7076 to maxvert=7304, maxind=10892 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=7304, maxind=10892 to maxvert=11156, maxind=16670 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=11156, maxind=16670 to maxvert=17204, maxind=25742 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=17204, maxind=25742 to maxvert=26000, maxind=38936 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=26000, maxind=38936 to maxvert=39104, maxind=58592 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/Script_2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/Script_2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/CParticleDescriptor_8FDDF740' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/CParticleDescriptor_1AB546E5' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Pentacle_AnimTrack.pkfx/CParticleDescriptor_092F5A6E' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Pentacle_AnimTrack.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Flame_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Flame_01.png) : 0.744 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=0, maxind=0 to maxvert=164, maxind=182 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=164, maxind=182 to maxvert=332, maxind=434 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=332, maxind=434 to maxvert=572, maxind=794 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=572, maxind=794 to maxvert=956, maxind=1370 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=956, maxind=1370 to maxvert=1508, maxind=2198 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=1508, maxind=2198 to maxvert=2408, maxind=3548 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=2408, maxind=3548 to maxvert=3728, maxind=5528 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=3728, maxind=5528 to maxvert=5702, maxind=8489 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=5702, maxind=8489 to maxvert=8816, maxind=13160 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=8816, maxind=13160 to maxvert=13310, maxind=19901 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=13310, maxind=19901 to maxvert=20288, maxind=30368 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleEvolver_Script_5FC3B145' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleEvolver_Script_5FC3B145' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleEvolver_Script_0DD7066D' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleEvolver_Script_0DD7066D' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleDescriptor_CF42AB20' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleEvolver_Script_F33F4D7A' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleEvolver_Script_F33F4D7A' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleDescriptor_D9B5C557' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleDescriptor_F3969EF3' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/Script_2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/Script_2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Soul_parentFunction.pkfx/CParticleDescriptor_1C17533F' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Soul_parentFunction.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Branch_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Branch_01.png) : 1.666 ms</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=0, maxind=0 to maxvert=320, maxind=416 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_02.png) : 1.611 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Smoke_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Smoke_02.png) : 1.671 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Glow_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Glow_01.png) : 0.252 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F9468 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6DE8 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=140, maxind=146 to maxvert=278, maxind=353 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=20288, maxind=30368 to maxvert=30620, maxind=45866 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=320, maxind=416 to maxvert=548, maxind=758 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=278, maxind=353 to maxvert=482, maxind=659 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=548, maxind=758 to maxvert=896, maxind=1280 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=896, maxind=1280 to maxvert=1430, maxind=2081 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=482, maxind=659 to maxvert=788, maxind=1118 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=1430, maxind=2081 to maxvert=2246, maxind=3305 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=2246, maxind=3305 to maxvert=3434, maxind=5087 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_Triggered.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_Triggered.pkfx/CParticleEvolver_Script_BC6BC1F2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_Triggered.pkfx/CParticleEvolver_Script_BC6BC1F2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_Triggered.pkfx/CParticleDescriptor_5D4096EA' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_Triggered.pkfx/CParticleDescriptor_A66FAC29' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_Triggered.pkfx/CParticleDescriptor_EAA1A97F' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_8E897EA2' (spawn)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Spark_ExternEvents.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Spark_03.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Spark_03.png) : 0.251 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Glow_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Glow_01.png) : 0.244 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=788, maxind=1118 to maxvert=1250, maxind=1811 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Spark_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Spark_01.png) : 0.359 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=266, maxind=335 to maxvert=464, maxind=632 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=266, maxind=335 to maxvert=464, maxind=632 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=464, maxind=632 to maxvert=776, maxind=1100 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=464, maxind=632 to maxvert=770, maxind=1091 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=776, maxind=1100 to maxvert=1238, maxind=1793 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=770, maxind=1091 to maxvert=1226, maxind=1775 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=1250, maxind=1811 to maxvert=1946, maxind=2855 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=1238, maxind=1793 to maxvert=1928, maxind=2828 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=1226, maxind=1775 to maxvert=1940, maxind=2846 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=3434, maxind=5087 to maxvert=5216, maxind=7760 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleEvolver_Script_A59C56E7' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleEvolver_Script_A59C56E7' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleDescriptor_CA3DB83D' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleEvolver_Script_6E30A2C2' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleEvolver_Script_6E30A2C2' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleDescriptor_B52E0415' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleEvolver_Script_E00D7BD4' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleEvolver_Script_E00D7BD4' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/ButterFly_sceneIntersect.pkfx/CParticleDescriptor_06273452' (spawn)</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FireFly_Attractor.pkfx/Script_1' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FireFly_Attractor.pkfx/Script_1' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/FireFly_Attractor.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/SceneButterflies.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=24.8 Kb (50.0 %), nodes=141.9 Kb, total=166.8 Kb (expanded=191.6 Kb)</div>
+<div class=W>[UnityPlugin]> [MeshBuilder::LoadPkmm] "Meshes/SceneButterflies.pkmm" OK (primitives count: 336)</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/ButterFly_sceneIntersect.pkfx"</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/FireFly_Attractor.pkfx"</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\ButterFly_02.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/ButterFly_02.png) : 2.791 ms</div>
+<div class=W>[UnityPlugin]> Performance warning: Texture has no mipmaps (Textures\Fx\Glow_01.png)</div>
+<div class=M>[Kernel_Profiler]> Loaded 2D Texture (Textures/Fx/Glow_01.png) : 0.252 ms</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FBAE8 buffers from maxverts=0, maxind=0 to maxvert=96128, maxind=144128 (IFORMAT=DXGI_FORMAT_R32_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F9938 buffers from maxverts=0, maxind=0 to maxvert=308, maxind=398 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[UnityPlugin]> Unloading OK "Particles/Spark_ExternEvents.pkfx"</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_8E897EA2' (spawn)</div>
+<div class=M>[UnityPlugin]> Unloading OK "Particles/Spark_ExternEvents.pkfx"</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_8E897EA2' (spawn)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[UnityPlugin]> Unloading OK "Particles/Spark_ExternEvents.pkfx"</div>
+<div class=E>[BaseObject]> Skipping unknown HBO field "Autostart"...</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-sub)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleEvolver_Script_EB7D093F' (Evolve-cst)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_AE135B2A' (spawn)</div>
+<div class=M>[Particles]> No suitable script IR cache found. Recompiling script 'Particles/Spark_ExternEvents.pkfx/CParticleDescriptor_8E897EA2' (spawn)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/SceneButterflies.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=24.8 Kb (50.0 %), nodes=141.9 Kb, total=166.8 Kb (expanded=191.6 Kb)</div>
+<div class=W>[UnityPlugin]> [MeshBuilder::LoadPkmm] "Meshes/SceneButterflies.pkmm" OK (primitives count: 336)</div>
+<div class=M>[UnityPlugin]> Preloading OK "Particles/Spark_ExternEvents.pkfx"</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=0, maxind=0 to maxvert=296, maxind=380 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CDD78 buffers from maxverts=0, maxind=0 to maxvert=1328, maxind=1928 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CF0B8 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=296, maxind=380 to maxvert=518, maxind=713 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=518, maxind=713 to maxvert=854, maxind=1217 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=854, maxind=1217 to maxvert=1352, maxind=1964 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8CEBE8 buffers from maxverts=1352, maxind=1964 to maxvert=2108, maxind=3098 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F24FEA8 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003F24FEA8 buffers from maxverts=140, maxind=146 to maxvert=278, maxind=353 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=0, maxind=0 to maxvert=212, maxind=254 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=212, maxind=254 to maxvert=452, maxind=614 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=452, maxind=614 to maxvert=776, maxind=1100 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=776, maxind=1100 to maxvert=1244, maxind=1802 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=1244, maxind=1802 to maxvert=1964, maxind=2882 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=1964, maxind=2882 to maxvert=3080, maxind=4556 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 000000003F8D25A8 buffers from maxverts=3080, maxind=4556 to maxvert=4748, maxind=7058 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=0, maxind=0 to maxvert=164, maxind=182 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=164, maxind=182 to maxvert=332, maxind=434 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=332, maxind=434 to maxvert=572, maxind=794 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=572, maxind=794 to maxvert=956, maxind=1370 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=956, maxind=1370 to maxvert=1544, maxind=2252 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=1544, maxind=2252 to maxvert=2432, maxind=3584 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F9468 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6DE8 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=0, maxind=0 to maxvert=176, maxind=200 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=2432, maxind=3584 to maxvert=3740, maxind=5546 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=176, maxind=200 to maxvert=374, maxind=497 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=140, maxind=146 to maxvert=278, maxind=353 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=374, maxind=497 to maxvert=632, maxind=884 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=3740, maxind=5546 to maxvert=5702, maxind=8489 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=278, maxind=353 to maxvert=488, maxind=668 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=632, maxind=884 to maxvert=1022, maxind=1469 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=1022, maxind=1469 to maxvert=1616, maxind=2360 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=5702, maxind=8489 to maxvert=8738, maxind=13043 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=266, maxind=335 to maxvert=476, maxind=650 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=266, maxind=335 to maxvert=482, maxind=659 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=488, maxind=668 to maxvert=800, maxind=1136 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing Ribbons 000000003FE881E8 buffers from maxverts=1616, maxind=2360 to maxvert=2492, maxind=3674 (IFORMAT=D3DFMT_INDEX16) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=8738, maxind=13043 to maxvert=13208, maxind=19748 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=476, maxind=650 to maxvert=782, maxind=1109 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=482, maxind=659 to maxvert=794, maxind=1127 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=794, maxind=1127 to maxvert=1262, maxind=1829 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=782, maxind=1109 to maxvert=1238, maxind=1793 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=800, maxind=1136 to maxvert=1268, maxind=1838 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7788 buffers from maxverts=13208, maxind=19748 to maxvert=20096, maxind=30080 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=1262, maxind=1829 to maxvert=1988, maxind=2918 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=1238, maxind=1793 to maxvert=1964, maxind=2882 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=1268, maxind=1838 to maxvert=1982, maxind=2909 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=1988, maxind=2918 to maxvert=3056, maxind=4520 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=1964, maxind=2882 to maxvert=3062, maxind=4529 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=134, maxind=137 to maxvert=284, maxind=362 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/SceneButterflies.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=24.8 Kb (50.0 %), nodes=141.9 Kb, total=166.8 Kb (expanded=191.6 Kb)</div>
+<div class=W>[UnityPlugin]> [MeshBuilder::LoadPkmm] "Meshes/SceneButterflies.pkmm" OK (primitives count: 336)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=0, maxind=0 to maxvert=212, maxind=254 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=0, maxind=0 to maxvert=212, maxind=254 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=212, maxind=254 to maxvert=386, maxind=515 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=212, maxind=254 to maxvert=422, maxind=569 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=0, maxind=0 to maxvert=140, maxind=146 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=386, maxind=515 to maxvert=686, maxind=965 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=422, maxind=569 to maxvert=698, maxind=983 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=140, maxind=146 to maxvert=278, maxind=353 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=278, maxind=353 to maxvert=482, maxind=659 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[Geometrics_MeshResource]> Loading Mesh "Assets/StreamingAssets/PackFx/Meshes/SceneButterflies.pkmm"</div>
+<div class=M>[Geometrics_MeshResource]> read KdTree chunk: leaves=24.8 Kb (50.0 %), nodes=141.9 Kb, total=166.8 Kb (expanded=191.6 Kb)</div>
+<div class=W>[UnityPlugin]> [MeshBuilder::LoadPkmm] "Meshes/SceneButterflies.pkmm" OK (primitives count: 336)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=0, maxind=0 to maxvert=134, maxind=137 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=134, maxind=137 to maxvert=266, maxind=335 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=0, maxind=0 to maxvert=152, maxind=164 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=0, maxind=0 to maxvert=152, maxind=164 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=266, maxind=335 to maxvert=488, maxind=668 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=266, maxind=335 to maxvert=470, maxind=641 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=152, maxind=164 to maxvert=296, maxind=380 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=470, maxind=641 to maxvert=770, maxind=1091 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=488, maxind=668 to maxvert=830, maxind=1181 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=770, maxind=1091 to maxvert=1244, maxind=1802 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=296, maxind=380 to maxvert=518, maxind=713 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=830, maxind=1181 to maxvert=1340, maxind=1946 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=518, maxind=713 to maxvert=848, maxind=1208 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=1244, maxind=1802 to maxvert=2036, maxind=2990 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=1340, maxind=1946 to maxvert=2108, maxind=3098 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=2036, maxind=2990 to maxvert=3194, maxind=4727 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=2108, maxind=3098 to maxvert=3260, maxind=4826 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=848, maxind=1208 to maxvert=1364, maxind=1982 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=3260, maxind=4826 to maxvert=4970, maxind=7391 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=3194, maxind=4727 to maxvert=4910, maxind=7301 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=152, maxind=164 to maxvert=302, maxind=389 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=1364, maxind=1982 to maxvert=2120, maxind=3116 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=2120, maxind=3116 to maxvert=3266, maxind=4835 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=4910, maxind=7301 to maxvert=7466, maxind=11135 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=4970, maxind=7391 to maxvert=7526, maxind=11225 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403FB618 buffers from maxverts=302, maxind=389 to maxvert=518, maxind=713 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=3266, maxind=4835 to maxvert=5000, maxind=7436 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F6918 buffers from maxverts=7526, maxind=11225 to maxvert=11354, maxind=16967 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F8128 buffers from maxverts=7466, maxind=11135 to maxvert=11294, maxind=16877 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=M>[UnityPlugin]> Growing FxMesh 00000000403F7C58 buffers from maxverts=5000, maxind=7436 to maxvert=7586, maxind=11315 (IFORMAT=DXGI_FORMAT_R16_UINT) (COLORS=FLOAT4)</div>
+<div class=W>[UnityPlugin]> Pack "Assets/StreamingAssets/PackFx" already loaded.</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=W>[UnityPlugin]> Unsupported attribute sampler : Butterfly_Turb</div>
+<div class=M>[UnityPlugin]> _PopcornFXStartup</div>
+<div class=M>[UnityPlugin]> GraphicsEventD3D11</div>
+<div class=M>[UnityPlugin]> _PopcornFXStartup</div>
+<div class=M>[UnityPlugin]> GraphicsEventD3D11</div>
+<div class=M>[UnityPlugin]> _PopcornFXStartup</div>
+<div class=M>[UnityPlugin]> GraphicsEventD3D11</div>
+<div class=M>[UnityPlugin]> _PopcornFXStartup</div>
+<div class=M>[UnityPlugin]> GraphicsEventD3D11</div>
+<div class=M><center>... SHUTDOWN ...</center></div></body></html>
