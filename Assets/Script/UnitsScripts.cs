@@ -8,7 +8,8 @@ public class UnitsScripts : MonoBehaviour
     {
         Tank,
         Heal,
-        Dps
+        Dps,
+        Debris
     }
     public Role _role;
 
@@ -24,11 +25,16 @@ public class UnitsScripts : MonoBehaviour
     [SerializeField]
     int _damage;
 
-    private int pvInitial;
+    [SerializeField]
+    int _range;
+
+    private int _pvInitial;
+    private int _shield;
 
     void Start()
     {
-        pvInitial = _pv;
+        _pvInitial = _pv;
+        _shield = 0;
     }
 
     public void Alignement()
@@ -36,24 +42,32 @@ public class UnitsScripts : MonoBehaviour
         bool healDone = false;
         if(_role == Role.Heal)
         {
-            UnitsScripts targetHeal = _gameManager.FindAllyToHeal(transform, _team);
+            UnitsScripts targetHeal = _gameManager.FindAllyToHeal(transform, _team, _range);
 
             if (targetHeal != null)
             {
                 targetHeal.ApplyHeal(_damage);
                 healDone = true;
-                Debug.Log("Heal Team" + _team + " ship : " + targetHeal.name);
+                //Debug.Log("Heal Team" + _team + " ship : " + targetHeal.name);
             }
         }
 
         if((_role != Role.Heal) || (_role == Role.Heal && !healDone))
         {
-            UnitsScripts target = _gameManager.FindTargetCloser(transform, _team == 1 ? 2 : 1);
+            UnitsScripts target = _gameManager.FindTargetCloser(transform, _team == 1 ? 2 : 1, _range);
 
             if(target != null)
             {
                 // Alignement Model
-                // TODO
+                transform.LookAt(target.transform);
+
+                RaycastHit hit;
+                Ray ray = new Ray(transform.position, transform.forward);
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.collider.gameObject.tag == "Asteroid")
+                        target = hit.collider.transform.GetComponentInParent<UnitsScripts>();
+                }
 
                 // Fire + Particles
                 Fire(target);
@@ -63,8 +77,12 @@ public class UnitsScripts : MonoBehaviour
    
     private void Fire(UnitsScripts target)
     {
-        Debug.Log(name + " attack " + target.name);
-        target.ApplyDamage(_damage);
+        //Debug.Log(name + " attack " + target.name);
+
+        if (_role == Role.Heal)
+            target.ApplyDamage(_damage / 2);
+        else
+            target.ApplyDamage(_damage);
     }
 
 
@@ -76,7 +94,7 @@ public class UnitsScripts : MonoBehaviour
 
     public bool IsDamaged()
     {
-        return _pv != pvInitial ? true : false;
+        return _pv != _pvInitial ? true : false;
     }
 
     public Transform GetPosition()
@@ -86,15 +104,51 @@ public class UnitsScripts : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
-        _pv -= damage;
+        if (_shield <= damage)
+        {
+            _pv += (_shield - damage);
+            _shield = 0;
+        }
+        else
+            _shield -= damage;
+
+        if (_pv <= 0)
+            Death();
     }
 
     public void ApplyHeal(int heal)
     {
-        if (_pv + heal > pvInitial)
-            _pv = pvInitial;
+        if (_pv + heal > _pvInitial)
+            _pv = _pvInitial;
         else
             _pv += heal;
+    }
+
+
+    public void ApplyShield(int shield)
+    {
+        // IF IN SHIELD TO DO
+
+        _shield = shield;
+    }
+
+    public void ApplyNuke(int damage)
+    {
+        // IF IN SHIELD TO DO
+
+        ApplyDamage(damage);
+    }
+
+    public void ApplyHealZone(int heal)
+    {
+        // IF IN SHIELD TO DO
+
+        ApplyHeal(heal);
+    }
+
+    private void Death()
+    {
+        gameObject.SetActive(false);
     }
 
 }
