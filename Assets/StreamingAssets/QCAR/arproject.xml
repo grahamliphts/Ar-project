@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="asteroid_6" size="1.000000 1.000000" />
+    <ImageTarget name="asteroid_5" size="1.000000 1.000000" />
+    <ImageTarget name="asteroid_4" size="1.000000 1.000000" />
+    <ImageTarget name="asteroid_3" size="1.000000 1.000000" />
+    <ImageTarget name="asteroid_2" size="1.000000 1.000000" />
+    <ImageTarget name="asteroid_1" size="1.000000 1.000000" />
     <ImageTarget name="tank_2" size="1.000000 1.000000" />
     <ImageTarget name="tank_1" size="1.000000 1.000000" />
     <ImageTarget name="spell_3_2" size="1.000000 1.000000" />
