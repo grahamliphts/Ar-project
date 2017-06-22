@@ -17,6 +17,9 @@ public class UnitsScripts : MonoBehaviour
     GameManager _gameManager;
 
     [SerializeField]
+    ParticleSystem[] _particles;
+
+    [SerializeField]
     int _team;
 
     [SerializeField]
@@ -31,9 +34,9 @@ public class UnitsScripts : MonoBehaviour
     private int _pvInitial;
     private int _shield;
 
-    public bool _inShield = false;
-    public bool _inHeal = false;
-    public bool _inPlasma = false;
+    private bool _inShield = false;
+    private bool _inHeal = false;
+    private bool _inPlasma = false;
 
     private Vector3 _vectorRotation;
 
@@ -57,6 +60,10 @@ public class UnitsScripts : MonoBehaviour
 
     public void Alignement()
     {
+        Debug.Log(name + " fire " + gameObject.activeSelf + " " + IsAlive());
+        if (!IsAlive() || gameObject.activeSelf == false)
+            return;
+
         bool healDone = false;
         if(_role == Role.Heal)
         {
@@ -88,23 +95,79 @@ public class UnitsScripts : MonoBehaviour
                 }
 
                 // Fire + Particles
-                Fire(target);
+                StartCoroutine("Fire", target);
             }
         }
 
+        /*
         _inShield = false;
         _inHeal = false;
-        _inPlasma = false;
+        _inPlasma = false;*/
     }
    
-    private void Fire(UnitsScripts target)
+    private IEnumerator Fire(UnitsScripts target)
     {
         //Debug.Log(name + " attack " + target.name);
+
+        if (_role == Role.Tank)
+        {
+            _particles[5].Play();
+            _particles[6].Play();
+            _particles[7].Play();
+            _particles[8].Play();
+        }
+        else if(_role == Role.Heal)
+        {
+            _particles[4].Play();
+            _particles[5].Play();
+            _particles[6].Play();
+            _particles[7].Play();
+        }
+        else if (_role == Role.Dps)
+        {
+            _particles[4].Play();
+            _particles[5].Play();
+            _particles[6].Play();
+            _particles[7].Play();
+            _particles[8].Play();
+            _particles[9].Play();
+            _particles[10].Play();
+            _particles[11].Play();
+        }
+
+        yield return new WaitForSeconds(1);
 
         if (_role == Role.Heal)
             target.ApplyDamage(_damage / 2);
         else
             target.ApplyDamage(_damage);
+
+
+        if (_role == Role.Tank)
+        {
+            _particles[5].Stop();
+            _particles[6].Stop();
+            _particles[7].Stop();
+            _particles[8].Stop();
+        }
+        else if (_role == Role.Heal)
+        {
+            _particles[4].Stop();
+            _particles[5].Stop();
+            _particles[6].Stop();
+            _particles[7].Stop();
+        }
+        else if (_role == Role.Dps)
+        {
+            _particles[4].Stop();
+            _particles[5].Stop();
+            _particles[6].Stop();
+            _particles[7].Stop();
+            _particles[8].Stop();
+            _particles[9].Stop();
+            _particles[10].Stop();
+            _particles[11].Stop();
+        }
     }
 
 
@@ -134,6 +197,32 @@ public class UnitsScripts : MonoBehaviour
         else
             _shield -= damage;
 
+        float life = _pv * 1.0f / _pvInitial;
+
+        if (_role == Role.Tank)
+        {
+            if (life <= 0.8f)
+                _particles[0].Play();
+            if (life <= 0.6f)
+                _particles[1].Play();
+            if (life <= 0.4f)
+                _particles[3].Play();
+            if (life <= 0.2f)
+                _particles[4].Play();
+        }
+        if (_role == Role.Heal || _role == Role.Dps)
+        {
+            if (life <= 0.8f)
+                _particles[0].Play();
+            if (life <= 0.6f)
+                _particles[1].Play();
+            if (life <= 0.4f)
+                _particles[2].Play();
+            if (life <= 0.2f)
+                _particles[3].Play();
+        }
+
+
         if (_pv <= 0)
             Death();
     }
@@ -144,6 +233,30 @@ public class UnitsScripts : MonoBehaviour
             _pv = _pvInitial;
         else
             _pv += heal;
+
+        float life = _pv * 1.0f / _pvInitial;
+        if (_role == Role.Tank)
+        {
+            if (life > 0.8f)
+                _particles[0].Stop();
+            if (life > 0.6f)
+                _particles[1].Stop();
+            if (life > 0.4f)
+                _particles[3].Stop();
+            if (life > 0.2f)
+                _particles[4].Stop();
+        }
+        if (_role == Role.Heal || _role == Role.Dps)
+        {
+            if (life > 0.8f)
+                _particles[0].Stop();
+            if (life > 0.6f)
+                _particles[1].Stop();
+            if (life > 0.4f)
+                _particles[2].Stop();
+            if (life > 0.2f)
+                _particles[3].Stop();
+        }
     }
 
 

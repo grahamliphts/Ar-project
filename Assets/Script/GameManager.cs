@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.Space))
         {
-            Resolve();
+            StartCoroutine(Resolve());
         }
     }
 
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         UnitsScripts[] unitsToSearch = (playerToSearch == 1) ? _unitsPlayer1 : _unitsPlayer2;
         foreach (UnitsScripts unit in unitsToSearch)
         {
-            if (unit.IsAlive())
+            if (unit.IsAlive() && unit.gameObject.activeSelf)
             {
                 Transform positionTarget = unit.GetPosition();
 
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         UnitsScripts[] unitsToSearch = (playerToSearch == 1) ? _unitsPlayer1 : _unitsPlayer2;
         foreach (UnitsScripts unit in unitsToSearch)
         {
-            if (unit.IsAlive() && unit.IsDamaged())
+            if (unit.IsAlive() && unit.gameObject.activeSelf && unit.IsDamaged())
             {
                 Transform positionTarget = unit.GetPosition();
 
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         return target;
     }
 
-    public void Resolve()
+    public IEnumerator Resolve()
     {
 
         // Déclenche et applique l'atout Shield
@@ -116,6 +116,8 @@ public class GameManager : MonoBehaviour
                     _spellsUsedPlayer1[0] = true;
                 if (player == 2)
                     _spellsUsedPlayer2[0] = true;
+
+                yield return new WaitForSeconds(1);
             }
         }
 
@@ -135,6 +137,8 @@ public class GameManager : MonoBehaviour
                     _spellsUsedPlayer1[1] = true;
                 if (player == 2)
                     _spellsUsedPlayer2[1] = true;
+
+                yield return new WaitForSeconds(1);
             }
         }
         
@@ -154,6 +158,8 @@ public class GameManager : MonoBehaviour
                     _spellsUsedPlayer1[2] = true;
                 if (player == 2)
                     _spellsUsedPlayer2[2] = true;
+
+                yield return new WaitForSeconds(1);
             }
         }
 
@@ -165,7 +171,11 @@ public class GameManager : MonoBehaviour
             {
                 UnitsScripts unit = (player == 1 ? _unitsPlayer1[i] : _unitsPlayer2[i]);
 
-                unit.Alignement();
+                if(unit.IsAlive() && unit.gameObject.activeSelf == true)
+                {
+                    unit.Alignement();
+                    yield return new WaitForSeconds(1);
+                }
             }
         }
     }
