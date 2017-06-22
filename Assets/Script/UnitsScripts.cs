@@ -31,6 +31,10 @@ public class UnitsScripts : MonoBehaviour
     private int _pvInitial;
     private int _shield;
 
+    private bool _inShield = false;
+    private bool _inHeal = false;
+    private bool _inPlasma = false;
+    private
     void Start()
     {
         _pvInitial = _pv;
@@ -73,6 +77,10 @@ public class UnitsScripts : MonoBehaviour
                 Fire(target);
             }
         }
+
+        _inShield = false;
+        _inHeal = false;
+        _inPlasma = false;
     }
    
     private void Fire(UnitsScripts target)
@@ -128,22 +136,22 @@ public class UnitsScripts : MonoBehaviour
     public void ApplyShield(int shield)
     {
         // IF IN SHIELD TO DO
-
-        _shield = shield;
+        if(_inShield)
+            _shield = shield;
     }
 
     public void ApplyNuke(int damage)
     {
         // IF IN SHIELD TO DO
-
-        ApplyDamage(damage);
+        if(_inPlasma)
+            ApplyDamage(damage);
     }
 
     public void ApplyHealZone(int heal)
     {
         // IF IN SHIELD TO DO
-
-        ApplyHeal(heal);
+        if(_inHeal)
+            ApplyHeal(heal);
     }
 
     private void Death()
@@ -151,4 +159,63 @@ public class UnitsScripts : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    void OnTriggerStay(Collider Other)
+    {
+        if (Other.gameObject.tag == "Shield_1" && _team == 1)
+        {
+            _inShield = true;//   playerInBounds = true;
+        }
+        else if ( Other.gameObject.tag == "Shield_2" && _team == 2)
+        {
+            _inShield = true;//
+        }
+
+        if(Other.gameObject.tag == "Heal_1" && _team == 1)
+        {
+            _inHeal = true;//
+        }
+        else if (Other.gameObject.tag == "Heal_2" && _team == 2)
+        {
+            _inHeal = true;//
+        }
+
+        if(Other.gameObject.tag == "Plasma_1" && _team == 1)
+        {
+            _inPlasma = true;//
+        }
+        else if (Other.gameObject.tag == "Plasma_2" && _team == 2)
+        {
+            _inPlasma = true;//
+        } 
+
+    }
+    void OntriggerExit(Collider Other)
+    {
+        if (Other.gameObject.tag == "Shield_1" && _team == 1)
+        {
+            _inShield = false;//   playerInBounds = true;
+        }
+        else if (Other.gameObject.tag == "Shield_2" && _team == 2)
+        {
+            _inShield = false;//
+        }
+
+        if (Other.gameObject.tag == "Heal_1" && _team == 1)
+        {
+            _inHeal = false;//
+        }
+        else if (Other.gameObject.tag == "Heal_2" && _team == 2)
+        {
+            _inHeal = false;//
+        }
+
+        if (Other.gameObject.tag == "Plasma_1" && _team == 1)
+        {
+            _inPlasma = false;//
+        }
+        else if (Other.gameObject.tag == "Plasma_2" && _team == 2)
+        {
+            _inPlasma = false;//
+        }
+    }
 }
