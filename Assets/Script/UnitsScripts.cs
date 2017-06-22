@@ -32,11 +32,11 @@ public class UnitsScripts : MonoBehaviour
     int _range;
 
     private int _pvInitial;
-    private int _shield;
+    public int _shield;
 
-    private bool _inShield = false;
-    private bool _inHeal = false;
-    private bool _inPlasma = false;
+    public bool _inShield = false;
+    public bool _inHeal = false;
+    public bool _inPlasma = false;
 
     private Vector3 _vectorRotation;
 
@@ -277,6 +277,7 @@ public class UnitsScripts : MonoBehaviour
     public void ApplyHealZone(int heal)
     {
         // IF IN SHIELD TO DO
+        Debug.Log("Heal de " + heal + " " + name);
         if(_inHeal)
             ApplyHeal(heal);
     }
@@ -336,5 +337,14 @@ public class UnitsScripts : MonoBehaviour
         {
             _inPlasma = false;//
         }
+    }
+
+    public void DesactiveAtout()
+    {
+        _inHeal = false;
+        _inPlasma = false;
+        _inShield = false;
+
+        _shield = 0;
     }
 }

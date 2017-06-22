@@ -99,6 +99,12 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator Resolve()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            _spellsPlayer1[i].SetActive(!_spellsUsedPlayer1[i]);
+            _spellsPlayer2[i].SetActive(!_spellsUsedPlayer2[i]);
+        }
+        yield return new WaitForSeconds(1);
 
         // Déclenche et applique l'atout Shield
         for (int player = 1; player <= 2; player++)
@@ -108,8 +114,9 @@ public class GameManager : MonoBehaviour
                 for (int j = 3; j >= 0; j--)
                 {
                     UnitsScripts unit = (player == 1 ? _unitsPlayer1[j] : _unitsPlayer2[j]);
-
-                    unit.ApplyShield(_shieldPower);
+                    Debug.Log("shield on");
+                    if(unit._inShield)
+                        unit.ApplyShield(_shieldPower);
                 }
 
                 if (player == 1)
@@ -122,26 +129,27 @@ public class GameManager : MonoBehaviour
         }
 
         // Déclenche et applique l'atout Nuke
-        for (int player = 1; player <= 2; player++)
+        if (CheckSpellActive(1, 1) && SpellAuthorization(1, 1) || CheckSpellActive(2, 1) && SpellAuthorization(2, 1))
         {
-            if (CheckSpellActive(player, 1) && SpellAuthorization(player, 1))
+            for (int player = 1; player <= 2; player++)
             {
                 for (int j = 3; j >= 0; j--)
                 {
                     UnitsScripts unit = (player == 1 ? _unitsPlayer1[j] : _unitsPlayer2[j]);
 
-                    unit.ApplyNuke(_nukeDamage);
+                    if (unit._inPlasma)
+                        unit.ApplyNuke(_nukeDamage);
                 }
-
-                if (player == 1)
-                    _spellsUsedPlayer1[1] = true;
-                if (player == 2)
-                    _spellsUsedPlayer2[1] = true;
-
                 yield return new WaitForSeconds(1);
             }
+
+            if (CheckSpellActive(1, 1))
+                _spellsUsedPlayer1[1] = true;
+            if (CheckSpellActive(2, 1))
+                _spellsUsedPlayer2[1] = true;
+
         }
-        
+
         // Déclenche et applique l'atout Heal
         for (int player = 1; player <= 2; player++)
         {
@@ -150,8 +158,9 @@ public class GameManager : MonoBehaviour
                 for (int j = 3; j >= 0; j--)
                 {
                     UnitsScripts unit = (player == 1 ? _unitsPlayer1[j] : _unitsPlayer2[j]);
-
-                    unit.ApplyHealZone(_healZone);
+                    Debug.Log("heal on");
+                    if (unit._inHeal)
+                        unit.ApplyHealZone(_healZone);
                 }
 
                 if (player == 1)
@@ -177,6 +186,26 @@ public class GameManager : MonoBehaviour
                     yield return new WaitForSeconds(1);
                 }
             }
+        }
+
+
+        for (int i = 3; i >= 0; i--)
+        {
+            for (int player = 1; player <= 2; player++)
+            {
+                UnitsScripts unit = (player == 1 ? _unitsPlayer1[i] : _unitsPlayer2[i]);
+
+                if (unit.IsAlive() && unit.gameObject.activeSelf == true)
+                {
+                    unit.DesactiveAtout();
+                }
+            }
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            _spellsPlayer1[i].SetActive(false);
+            _spellsPlayer2[i].SetActive(false);
         }
     }
 
