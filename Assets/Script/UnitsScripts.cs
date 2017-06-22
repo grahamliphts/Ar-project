@@ -31,14 +31,28 @@ public class UnitsScripts : MonoBehaviour
     private int _pvInitial;
     private int _shield;
 
-    private bool _inShield = false;
-    private bool _inHeal = false;
-    private bool _inPlasma = false;
-    private
+    public bool _inShield = false;
+    public bool _inHeal = false;
+    public bool _inPlasma = false;
+
+    private Vector3 _vectorRotation;
+
     void Start()
     {
         _pvInitial = _pv;
         _shield = 0;
+
+        _vectorRotation.x = Random.Range(0, 5);
+        _vectorRotation.y = Random.Range(0, 5);
+        _vectorRotation.z = Random.Range(0, 5);
+    }
+
+    void Update()
+    {
+        if(_role == Role.Debris)
+        {
+            transform.GetChild(0).transform.Rotate(_vectorRotation * 0.1f);
+        }
     }
 
     public void Alignement()
@@ -159,7 +173,7 @@ public class UnitsScripts : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void OnTriggerStay(Collider Other)
+    void OnTriggerEnter(Collider Other)
     {
         if (Other.gameObject.tag == "Shield_1" && _team == 1)
         {
@@ -179,18 +193,14 @@ public class UnitsScripts : MonoBehaviour
             _inHeal = true;//
         }
 
-        if(Other.gameObject.tag == "Plasma_1" && _team == 1)
+        if(Other.gameObject.tag == "Plasma_1" || Other.gameObject.tag == "Plasma_2")
         {
             _inPlasma = true;//
         }
-        else if (Other.gameObject.tag == "Plasma_2" && _team == 2)
-        {
-            _inPlasma = true;//
-        } 
-
     }
-    void OntriggerExit(Collider Other)
+    void OnTriggerExit(Collider Other)
     {
+        Debug.Log(Other.tag);
         if (Other.gameObject.tag == "Shield_1" && _team == 1)
         {
             _inShield = false;//   playerInBounds = true;
@@ -209,11 +219,7 @@ public class UnitsScripts : MonoBehaviour
             _inHeal = false;//
         }
 
-        if (Other.gameObject.tag == "Plasma_1" && _team == 1)
-        {
-            _inPlasma = false;//
-        }
-        else if (Other.gameObject.tag == "Plasma_2" && _team == 2)
+        if (Other.gameObject.tag == "Plasma_1" || Other.gameObject.tag == "Plasma_2")
         {
             _inPlasma = false;//
         }

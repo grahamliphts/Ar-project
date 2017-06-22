@@ -111,6 +111,11 @@ public class GameManager : MonoBehaviour
 
                     unit.ApplyShield(_shieldPower);
                 }
+
+                if (player == 1)
+                    _spellsUsedPlayer1[0] = true;
+                if (player == 2)
+                    _spellsUsedPlayer2[0] = true;
             }
         }
 
@@ -125,6 +130,11 @@ public class GameManager : MonoBehaviour
 
                     unit.ApplyNuke(_nukeDamage);
                 }
+
+                if (player == 1)
+                    _spellsUsedPlayer1[1] = true;
+                if (player == 2)
+                    _spellsUsedPlayer2[1] = true;
             }
         }
         
@@ -139,14 +149,19 @@ public class GameManager : MonoBehaviour
 
                     unit.ApplyHealZone(_healZone);
                 }
+
+                if (player == 1)
+                    _spellsUsedPlayer1[2] = true;
+                if (player == 2)
+                    _spellsUsedPlayer2[2] = true;
             }
         }
 
 
         // Tirs des vaisseaux
-        for (int i = 0; i >= 0; i--)
+        for (int i = 3; i >= 0; i--)
         {
-            for (int player = 2; player <= 2; player++)
+            for (int player = 1; player <= 2; player++)
             {
                 UnitsScripts unit = (player == 1 ? _unitsPlayer1[i] : _unitsPlayer2[i]);
 
